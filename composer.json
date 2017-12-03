@@ -1,0 +1,23 @@
+{
+  "name": "phalcon-template",
+  "type": "project",
+  "require-dev" : {
+    "phpunit/phpunit":">=6.4.3"
+  },
+  "require": {
+    "php": ">=7.0",
+    "ext-mongodb": "^1.2.0",
+    "ext-phalcon":">=3.2",
+    "mongodb/mongodb": "^1.1",
+    "728443778/php-utils":"dev-master",
+    "aliyuncs/oss-sdk-php": "~2.0"
+  },
+  "scripts":{
+    "post-install-cmd":[
+      "php install.php"
+    ],
+    "post-update-cmd" : [
+      "php install.php"
+    ]
+  }
+}
