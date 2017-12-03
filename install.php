@@ -51,4 +51,15 @@ if (is_dir($modelsCache)) {
     }
     echo 'create ', $modelsCache,PHP_EOL;
 }
+
+$configFile = $dir . '/app/config/config.php';
+if (is_file($configFile)) {
+    exit(0);
+}
+//复制配置文件
+if (!copy($dir . '/env/dev.config.php', $dir . '/app/config/config.php')) {
+    exit('copy develop config file failed');
+} else {
+    echo 'copy develop config file success',PHP_EOL;
+}
 exit(0);
